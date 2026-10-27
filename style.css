@@ -1,0 +1,770 @@
+/* ----------------------------------
+
+Template Name: Stackly - Transportation & Logistics Template
+Author: validtheme
+Description:
+Version: 1.0
+
+Main Font    : Inter
+Main Color   : #FF5C01
+
+-------------------------------------
+
+[Typography]
+
+Body copy:    15px 'Inter', sans-serif
+Header:     36px 'Inter', sans-serif
+Input, textarea:  15px 'Inter', sans-serif
+Sidebar heading:  20px 'Inter', sans-serif
+
+>>> TABLE OF CONTENTS:
+=======================
+        
+    01. Template default css
+        - Animations
+        - General
+        - Section Title
+        - Video Button
+        - Typography
+        - Tables
+        - Forms
+        - Buttons
+        - Pagination
+        - Colors
+        - Accordion
+        - Tabs
+    02. Preloader
+    03. Topbar
+    04 Navbar
+        - Navbar Default
+        - Navbar Transparent
+        - Navbar Sticky
+        - Navbar Box
+    05. Banner
+        - Banner Style One
+        - Banner Style Two
+        - Banner Style Three
+        - Banner Style Four
+        - Banner Style Five
+        - Banner Style Six
+    06. Features
+    07. About Us
+        - Version One
+        - Version Two
+        - Version Three
+    08. Services
+        - Version One
+        - Version Two
+        - Version Three
+        - Version Four
+        - Version Five
+        - Version Six
+        - Service Single
+    09. Gallery
+        - Version One
+        - Version Two
+        - Version Three
+        - Version Foiur
+        - Gallery Single
+    10. Team
+        - Version One
+        - Version Two
+        - Team Single
+    11. Request Quote
+    12. Why Choose Us
+    13. Our Expertise
+    14. Companies/Clients/Partner
+    15. Testimonials
+    16. Work Process
+    17. FAQ
+    18. Blog
+        - Standard
+        - Left Sidebar
+        - Right Sidebar
+        - Single
+    19. Error 404
+    20. Footer
+    21. PHP Contact Form
+    22. Others
+
+*/
+
+/*
+** General Styles for HTML tags
+*/
+
+
+
+/* Stackly interaction polish: hover effects on desktop and fine pointers only */
+@media (hover: hover) and (pointer: fine) and (min-width: 1025px) {
+  a, button, [role="button"], input[type="submit"], input[type="button"],
+  .btn, .button, .service-item, .service-card, .feature-item, .feature-card,
+  .pricing-item, .pricing-card, .blog-item, .blog-card, .team-item, .team-card,
+  .gallery-item, .portfolio-item, .testimonial-item, .contact-item, .icon-box,
+  .single-item, .fun-fact, .process-item {
+    transition: transform .28s ease, box-shadow .28s ease, color .25s ease,
+      background-color .25s ease, border-color .25s ease, filter .25s ease;
+  }
+  a:not(.logo):hover, button:hover, [role="button"]:hover,
+  input[type="submit"]:hover, input[type="button"]:hover, .btn:hover, .button:hover {
+    transform: translateY(-3px);
+    filter: brightness(1.04);
+  }
+  .service-item:hover, .service-card:hover, .feature-item:hover, .feature-card:hover,
+  .pricing-item:hover, .pricing-card:hover, .blog-item:hover, .blog-card:hover,
+  .team-item:hover, .team-card:hover, .gallery-item:hover, .portfolio-item:hover,
+  .contact-item:hover, .icon-box:hover, .single-item:hover, .fun-fact:hover,
+  .process-item:hover {
+    transform: translateY(-7px);
+    box-shadow: 0 16px 36px rgba(7, 47, 57, .14);
+  }
+  .gallery-item img:hover, .portfolio-item img:hover, .blog-item img:hover,
+  .blog-card img:hover, .service-item img:hover, .service-card img:hover {
+    filter: saturate(1.08) contrast(1.02);
+  }
+  header a:hover, footer a:hover { text-decoration-thickness: 2px; }
+}
+@media (prefers-reduced-motion: reduce) {
+  [data-aos], .aos-animate { transition-duration: .01ms !important; animation-duration: .01ms !important; }
+}
+
+
+
+/* Stackly comprehensive hover detailing — fine-pointer desktop only.
+   Covers major cards plus small UI details, icons, labels, list items and media. */
+@media (hover: hover) and (pointer: fine) and (min-width: 1025px) {
+  /* Give even tiny interactive and visual elements a consistent smooth response. */
+  body a, body button, body [role="button"], body [tabindex],
+  body input:not([type="hidden"]), body select, body textarea,
+  body label, body .badge, body .tag, body .price, body .icon,
+  body i, body svg, body img, body li, body .list-item,
+  body .nav-link, body .social-link, body .social-icons a,
+  body .feature, body .feature-item, body .service, body .service-item,
+  body .pricing-item, body .pricing-card, body .blog-item, body .blog-card,
+  body .gallery-item, body .portfolio-item, body .team-item,
+  body .testimonial-item, body .contact-item, body .icon-box,
+  body .fun-fact, body .process-item, body .accordion-item,
+  body .tab-link, body .pagination a, body .breadcrumb a {
+    transition:
+      transform .24s ease,
+      color .22s ease,
+      background-color .22s ease,
+      border-color .22s ease,
+      box-shadow .24s ease,
+      opacity .22s ease,
+      filter .24s ease;
+  }
+
+  /* Clickable controls and small text links */
+  body a:hover, body button:hover, body [role="button"]:hover,
+  body [tabindex]:hover, body input:not([type="hidden"]):hover,
+  body select:hover, body textarea:hover, body .nav-link:hover,
+  body .pagination a:hover, body .breadcrumb a:hover {
+    filter: brightness(1.045);
+  }
+  body a:not(.logo):hover, body button:hover,
+  body [role="button"]:hover, body input[type="button"]:hover,
+  body input[type="submit"]:hover, body .btn:hover, body .button:hover {
+    transform: translateY(-2px);
+  }
+
+  /* Micro-hover for small decorative icons, badges and inline image details */
+  body i:hover, body svg:hover, body .icon:hover,
+  body .badge:hover, body .tag:hover, body .social-link:hover,
+  body .social-icons a:hover, body .nav-link:hover,
+  body .list-item:hover, body li:hover {
+    color: #ff5a00;
+  }
+  body img:hover {
+    filter: saturate(1.07) contrast(1.025);
+  }
+
+  /* Lift cards and larger repeated content blocks with a slightly stronger response */
+  body .service, body .service-item, body .service-card,
+  body .feature, body .feature-item, body .feature-card,
+  body .pricing-item, body .pricing-card, body .blog-item,
+  body .blog-card, body .gallery-item, body .portfolio-item,
+  body .team-item, body .team-card, body .testimonial-item,
+  body .contact-item, body .icon-box, body .fun-fact,
+  body .process-item, body .accordion-item {
+    will-change: transform;
+  }
+  body .service:hover, body .service-item:hover, body .service-card:hover,
+  body .feature:hover, body .feature-item:hover, body .feature-card:hover,
+  body .pricing-item:hover, body .pricing-card:hover, body .blog-item:hover,
+  body .blog-card:hover, body .gallery-item:hover, body .portfolio-item:hover,
+  body .team-item:hover, body .team-card:hover, body .testimonial-item:hover,
+  body .contact-item:hover, body .icon-box:hover, body .fun-fact:hover,
+  body .process-item:hover, body .accordion-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 28px rgba(7, 47, 57, .13);
+  }
+
+  /* Inputs and compact controls get a crisp focus-like hover cue */
+  body input:not([type="hidden"]):hover, body select:hover,
+  body textarea:hover {
+    border-color: rgba(255, 90, 0, .65);
+  }
+}
+@media (hover: none), (pointer: coarse), (max-width: 1024px) {
+  /* Avoid sticky hover states on touch screens; retain existing tap behavior. */
+  body *:hover { transform: none; }
+}
+@media (prefers-reduced-motion: reduce) {
+  body *, body *::before, body *::after {
+    transition-duration: .01ms !important;
+    animation-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+
+
+/* Stackly extended hover coverage: imagery, feature rows, individual points and fine details */
+@media (hover: hover) and (pointer: fine) and (min-width: 1025px) {
+  /* Screenshot-style point-by-point feature rows */
+  .feature-style-two-items li,
+  .feature-two-left-info li,
+  .feature-two-left-info .wow,
+  .feature-style-two-items .list-number,
+  .process-style-two-single,
+  .process-style-two-item,
+  .location-item,
+  .f-item,
+  .fun-fact-style-one-items > div,
+  .about-five-thumb,
+  .about-five-right {
+    transition: transform .28s ease, color .24s ease,
+      background-color .24s ease, border-color .24s ease,
+      box-shadow .28s ease, filter .24s ease;
+  }
+
+  .feature-style-two-items li:hover,
+  .feature-two-left-info li:hover,
+  .process-style-two-single:hover,
+  .process-style-two-item:hover,
+  .location-item:hover,
+  .f-item:hover,
+  .fun-fact-style-one-items > div:hover {
+    transform: translateX(5px);
+    color: #0b4653;
+  }
+
+  .feature-style-two-items li:hover .list-number,
+  .feature-two-left-info li:hover .list-number,
+  .process-style-two-single:hover .process-style-two-number,
+  .process-style-two-single:hover .process-number,
+  .process-style-two-item:hover .process-number {
+    background-color: #ff5a00;
+    color: #fff;
+    transform: scale(1.06);
+  }
+
+  /* Hover transitions for pictures across the complete site, including backgrounds/cards */
+  img, picture, .thumb, .thumb img, .banner, .banner img,
+  .blog-item .thumb, .gallery-item, .gallery-item img,
+  .portfolio-item img, .service-item img, .about-five-thumb img,
+  .team-style-one-item img, .process-style-two-single img {
+    transition: transform .4s ease, filter .35s ease, opacity .3s ease;
+  }
+  img:hover, .thumb:hover img, .gallery-item:hover img,
+  .blog-item:hover img, .portfolio-item:hover img,
+  .service-item:hover img, .about-five-thumb:hover img,
+  .team-style-one-item:hover img, .process-style-two-single:hover img {
+    transform: scale(1.035);
+    filter: saturate(1.1) contrast(1.025);
+  }
+
+  /* Tiny icons, arrows, badges and decorative symbols */
+  .feature-style-two-items li i, .feature-style-two-items li svg,
+  .feature-two-left-info li i, .feature-two-left-info li svg,
+  .social-link i, .social-icons a i, .btn i, .button i,
+  .list-number, .item-price, .badge, .tag {
+    transition: transform .25s ease, color .22s ease,
+      background-color .22s ease, box-shadow .25s ease;
+  }
+  a:hover i, button:hover i, a:hover svg, button:hover svg,
+  .btn:hover i, .button:hover i {
+    transform: translateX(2px);
+  }
+  .list-number:hover, .item-price:hover, .badge:hover, .tag:hover {
+    box-shadow: 0 5px 14px rgba(7, 47, 57, .16);
+  }
+
+  /* Hover on individual content lines / list entries where no card wrapper exists */
+  .feature-style-two-items li:hover h4,
+  .feature-style-two-items li:hover h5,
+  .feature-style-two-items li:hover p,
+  .feature-two-left-info li:hover h4,
+  .feature-two-left-info li:hover h5,
+  .feature-two-left-info li:hover p,
+  .f-item a:hover, .f-item li:hover {
+    color: #ff5a00;
+  }
+
+  /* Keep overlay interactions smooth */
+  .overlay, .overlay::before, .overlay::after,
+  .item .overlay, .gallery-item::before, .gallery-item::after,
+  .blog-item .overlay, .portfolio-item .overlay {
+    transition: opacity .3s ease, background-color .3s ease,
+      transform .35s ease;
+  }
+}
+@media (hover: none), (pointer: coarse), (max-width: 1024px) {
+  /* Touch users retain normal scrolling and tapping; no desktop hover transforms. */
+  .feature-style-two-items li:hover,
+  .feature-two-left-info li:hover,
+  .process-style-two-single:hover,
+  .process-style-two-item:hover,
+  .location-item:hover,
+  .f-item:hover,
+  img:hover {
+    transform: none;
+  }
+}
+
+
+
+/* Stackly targeted hover fix for statistics, bullet points, progress bars, pricing blocks and imagery */
+@media (hover: hover) and (pointer: fine) and (min-width: 1025px) {
+  /* Shipment bullet list: each line and its orange star */
+  .pricing-content .list-style-one li,
+  .pricing-content ul li,
+  .pricing-content li {
+    transition: transform .25s ease, color .25s ease,
+      background-color .25s ease, text-shadow .25s ease;
+    transform-origin: left center;
+  }
+  .pricing-content .list-style-one li:hover,
+  .pricing-content ul li:hover,
+  .pricing-content li:hover {
+    transform: translateX(6px);
+    color: #ff5a00;
+  }
+  .pricing-content li::marker {
+    transition: color .25s ease;
+  }
+  .pricing-content li:hover::marker {
+    color: #0b4653;
+  }
+  .pricing-content li i,
+  .pricing-content li svg,
+  .pricing-content li .icon {
+    transition: transform .25s ease, color .25s ease;
+  }
+  .pricing-content li:hover i,
+  .pricing-content li:hover svg,
+  .pricing-content li:hover .icon {
+    transform: rotate(8deg) scale(1.12);
+    color: #ff5a00;
+  }
+
+  /* KPI / percentage statistics blocks */
+  .fun-fact, .fun-fact .timer, .fun-fact .operator,
+  .fun-fact h2, .fun-fact h3, .fun-fact h4,
+  .fun-fact p, .fun-fact .counter {
+    transition: transform .28s ease, color .25s ease,
+      text-shadow .25s ease, background-color .25s ease;
+  }
+  .fun-fact:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 12px 26px rgba(7, 47, 57, .15);
+  }
+  .fun-fact:hover .timer,
+  .fun-fact:hover .counter {
+    transform: scale(1.045);
+    color: #ff5a00;
+  }
+  .fun-fact:hover h2, .fun-fact:hover h3,
+  .fun-fact:hover h4, .fun-fact:hover p {
+    color: #ff5a00;
+  }
+
+  /* Percentage tiles and progress tracks */
+  .progress-box, .progress-box h5, .progress-box .progress,
+  .progress-box .progress-bar, .progress-box .progress-bar span {
+    transition: transform .28s ease, color .25s ease,
+      background-color .25s ease, box-shadow .28s ease;
+  }
+  .progress-box:hover {
+    transform: translateY(-3px);
+  }
+  .progress-box:hover .progress {
+    box-shadow: 0 0 0 2px rgba(255, 90, 0, .16);
+  }
+  .progress-box:hover .progress-bar {
+    filter: brightness(1.08);
+  }
+  .progress-box:hover h5,
+  .progress-box:hover .progress-bar span {
+    color: #ff5a00;
+  }
+
+  /* Pricing tabs/cards, including the large separate price panel */
+  .pricing-tab-navs .nav-link,
+  .pricing-tab-navs .nav-link .item-price,
+  .pricing-tab-navs .nav-link h4,
+  .pricing-tab-navs .nav-link h5,
+  .pricing-tab-navs .nav-link .price,
+  .pricing-tab-navs .nav-link .price-unit {
+    transition: transform .28s ease, color .25s ease,
+      background-color .25s ease, border-color .25s ease,
+      box-shadow .28s ease, filter .25s ease;
+  }
+  .pricing-tab-navs .nav-link:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 14px 28px rgba(7, 47, 57, .14);
+    filter: brightness(1.025);
+  }
+  .pricing-tab-navs .nav-link:hover .item-price {
+    background-color: #ff5a00;
+    color: #fff;
+    transform: scale(1.035);
+  }
+  .pricing-tab-navs .nav-link:hover h4,
+  .pricing-tab-navs .nav-link:hover h5 {
+    color: #ff5a00;
+  }
+
+  /* Images and image-containing panels */
+  .pricing-content img, .pricing-content picture,
+  .choose-us-two-thumb img, .choose-us-two-thumb,
+  .about-five-thumb img, .gallery-item img,
+  .blog-item img, .service-item img {
+    transition: transform .4s ease, filter .35s ease;
+  }
+  .pricing-content img:hover, .choose-us-two-thumb:hover img,
+  .about-five-thumb:hover img, .gallery-item:hover img,
+  .blog-item:hover img, .service-item:hover img {
+    transform: scale(1.04);
+    filter: saturate(1.1) contrast(1.025);
+  }
+}
+/* Contact-page preloader failsafe: do not let the loader cover the page indefinitely. */
+#preloader.stackly-preloader-failsafe-hidden {
+  visibility: hidden !important;
+  opacity: 0 !important;
+  pointer-events: none !important;
+  transition: opacity .45s ease, visibility .45s ease !important;
+}
+@media (hover: none), (pointer: coarse), (max-width: 1024px) {
+  .pricing-content .list-style-one li:hover,
+  .pricing-content ul li:hover,
+  .fun-fact:hover, .progress-box:hover,
+  .pricing-tab-navs .nav-link:hover {
+    transform: none;
+    box-shadow: none;
+  }
+}
+
+
+
+/* Accessible, professional validation feedback for Stackly forms */
+.stackly-field-error {
+  display: none;
+  color: #b42318;
+  font-size: 13px;
+  line-height: 1.45;
+  margin: 7px 0 0;
+  font-weight: 500;
+}
+.stackly-invalid {
+  border-color: #b42318 !important;
+  box-shadow: 0 0 0 2px rgba(180, 35, 24, .10) !important;
+}
+.stackly-form-notice {
+  color: #b42318;
+  font-size: 14px;
+  margin-top: 12px;
+  font-weight: 600;
+}
+
+/* === Stackly professional mobile navigation + centered footer (2026-10-27) === */
+@media (max-width: 1024px) {
+  html, body { max-width:100%; overflow-x:hidden; }
+  body.stackly-menu-open { overflow:hidden !important; touch-action:none; }
+  header { position:relative; z-index:1005; }
+  header .navbar.mobile-sidenav { background:#fff !important; min-height:84px; }
+  header .navbar.mobile-sidenav > .container-fill { width:100%; padding-left:18px; padding-right:18px; }
+  header .navbar.mobile-sidenav .row.align-center { display:flex; align-items:center; justify-content:space-between; margin:0; min-height:84px; }
+  header .navbar.mobile-sidenav .brand-item { flex:1 1 auto; width:auto; max-width:calc(100% - 64px); padding:0; }
+  header .navbar-header { display:flex; align-items:center; justify-content:space-between; width:100%; min-height:84px; }
+  header .navbar-header .navbar-brand { display:flex; align-items:center; order:1; padding:0; margin:0; max-width:calc(100% - 64px); }
+  header .navbar-header .navbar-brand img { display:block; width:auto; max-width:min(205px, 100%); max-height:56px; object-fit:contain; }
+  header .navbar-header .navbar-toggle { order:2; display:flex !important; align-items:center; justify-content:center; flex:0 0 46px; width:46px; height:46px; margin:0; padding:0; border:0; border-radius:50%; background:transparent !important; color:#252333 !important; box-shadow:none; font-size:25px; line-height:1; z-index:1012; }
+  header .navbar-header .navbar-toggle .fa-bars { font-size:25px; }
+  header .navbar-header .navbar-toggle .fa-times { font-size:27px; }
+  header .navbar.mobile-sidenav .col-lg-6 { position:static; width:0; padding:0; }
+  header #navbar-menu.navbar-collapse { display:none !important; position:fixed !important; inset:0 !important; z-index:1010 !important; width:100vw !important; height:100dvh !important; max-height:100dvh !important; overflow-y:auto !important; overflow-x:hidden !important; margin:0 !important; padding:96px 22px 28px !important; border:0 !important; background:#1e2232 !important; visibility:hidden; opacity:0; transform:translateX(100%); transition:transform .25s ease, opacity .25s ease; }
+  header #navbar-menu.stackly-menu-visible { display:block !important; visibility:visible; opacity:1; transform:translateX(0); }
+  header #navbar-menu > a { position:fixed; top:17px; left:20px; display:flex; align-items:center; height:58px; max-width:calc(100vw - 100px); z-index:1013; }
+  header #navbar-menu > a img { display:block; width:auto; max-width:190px; max-height:54px; object-fit:contain; opacity:1 !important; visibility:visible !important; }
+  header #navbar-menu > .navbar-toggle { position:fixed !important; top:20px; right:18px; display:flex !important; align-items:center; justify-content:center; width:46px; height:46px; padding:0; margin:0; border:1px solid rgba(255,255,255,.6) !important; border-radius:50%; background:transparent !important; color:#fff !important; z-index:1014; }
+  header #navbar-menu > .navbar-toggle .fa-times { display:inline-block; color:#fff; }
+  header #navbar-menu .nav.navbar-nav { display:flex !important; flex-direction:column; align-items:stretch; width:100%; margin:0 auto !important; padding:0 !important; text-align:center; }
+  header #navbar-menu .nav.navbar-nav > li { display:block; float:none; width:100%; margin:0; padding:0; border-bottom:1px solid rgba(255,255,255,.12); }
+  header #navbar-menu .nav.navbar-nav > li > a { display:flex !important; justify-content:center; align-items:center; min-height:58px; padding:14px 12px !important; color:#fff !important; font-size:18px; font-weight:600; line-height:1.35; text-align:center; background:transparent !important; border-radius:0; }
+  header #navbar-menu .nav.navbar-nav > li > a.current-page,
+  header #navbar-menu .nav.navbar-nav > li > a[aria-current="page"] { color:#fff !important; background:rgba(128,81,150,.38) !important; box-shadow:inset 4px 0 #805196; }
+  header .col-lg-3:has(.attr-right) { display:none !important; }
+  header .overlay-screen { display:none !important; }
+  header #navbar-menu .stackly-mobile-auth { display:flex; flex-direction:column; gap:14px; width:min(100%, 360px); margin:28px auto 0; padding-bottom:12px; }
+  header #navbar-menu .stackly-mobile-auth a { display:flex; justify-content:center; align-items:center; width:100%; min-height:54px; padding:13px 20px; border-radius:999px; font-size:18px; font-weight:700; text-decoration:none; }
+  header #navbar-menu .stackly-mobile-auth .stackly-login { background:#805196; color:#fff; }
+  header #navbar-menu .stackly-mobile-auth .stackly-register { background:#54d1e6; color:#1e2232; }
+  /* Footer content centered on phones and tablets. */
+  footer .footer-item, footer .footer-logo, footer .footer-item-grid,
+  footer .footer-single-grid, footer .footer-bottom, footer .footer-social-regular { text-align:center !important; }
+  footer .footer-logo { display:flex; flex-direction:column; align-items:center; }
+  footer .footer-logo img { margin-left:auto !important; margin-right:auto !important; }
+  footer .footer-item-grid { display:flex !important; flex-direction:column; align-items:center; gap:24px; }
+  footer .footer-single-grid { width:100%; }
+  footer .footer-social-regular { display:flex !important; flex-wrap:wrap; justify-content:center !important; align-items:center; gap:14px; padding-left:0 !important; margin-left:0 !important; }
+  footer ul { padding-left:0 !important; list-style-position:inside; }
+  footer .footer-bottom * { text-align:center !important; }
+}
+@media (min-width:1025px) { header #navbar-menu .stackly-mobile-auth { display:none !important; } }
+@media (max-width:380px) {
+  header #navbar-menu.navbar-collapse { padding-left:16px !important; padding-right:16px !important; }
+  header #navbar-menu > a img { max-width:165px; }
+  header .navbar-header .navbar-brand img { max-width:170px; }
+}
+@media (max-width:1024px) {
+  body.stackly-menu-open header .navbar-header .navbar-toggle { visibility:hidden !important; pointer-events:none !important; }
+  header #navbar-menu > a { background:#1e2232; }
+}
+
+/* Final mobile header/auth corrections */
+@media (max-width:1024px) {
+  header .navbar-header { position:relative; justify-content:space-between !important; }
+  header .navbar-header .navbar-brand { margin-right:auto !important; }
+  header .navbar-header .navbar-toggle { margin-left:auto !important; }
+  header #navbar-menu > a.stackly-menu-brand { background:transparent !important; }
+  header #navbar-menu > a.stackly-menu-brand img { filter:none !important; }
+  header #navbar-menu .stackly-mobile-auth { margin-top:28px; }
+}
+/* Mobile header corner alignment fix — logo left, hamburger right */
+@media screen and (max-width: 1024px) {
+  header > nav.navbar.mobile-sidenav { width:100% !important; }
+  header > nav.navbar.mobile-sidenav > .container-fill { width:100% !important; max-width:100% !important; padding-left:16px !important; padding-right:16px !important; }
+  header > nav.navbar.mobile-sidenav > .container-fill > .row.align-center { display:flex !important; flex-wrap:nowrap !important; align-items:center !important; justify-content:space-between !important; width:100% !important; min-height:84px !important; margin:0 !important; }
+  header > nav.navbar.mobile-sidenav .brand-item { display:block !important; flex:1 1 0 !important; width:auto !important; max-width:none !important; min-width:0 !important; padding:0 !important; }
+  header > nav.navbar.mobile-sidenav .navbar-header { display:flex !important; flex-direction:row !important; flex-wrap:nowrap !important; align-items:center !important; justify-content:space-between !important; gap:12px !important; width:100% !important; min-width:0 !important; min-height:84px !important; margin:0 !important; float:none !important; }
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-brand { order:1 !important; display:flex !important; flex:0 1 auto !important; min-width:0 !important; max-width:calc(100% - 58px) !important; margin:0 auto 0 0 !important; padding:0 !important; float:none !important; }
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-brand img { display:block !important; width:auto !important; height:auto !important; max-width:min(190px, 100%) !important; max-height:54px !important; object-fit:contain !important; }
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-toggle { order:2 !important; position:relative !important; inset:auto !important; display:flex !important; flex:0 0 44px !important; width:44px !important; min-width:44px !important; height:44px !important; margin:0 0 0 auto !important; padding:0 !important; float:none !important; transform:none !important; }
+}
+@media screen and (max-width:380px) {
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-brand img { max-width:155px !important; max-height:48px !important; }
+}
+
+
+/* FINAL FIX: Stackly logo alignment and sizing on mobile */
+@media screen and (max-width: 1024px) {
+  header > nav.navbar.mobile-sidenav > .container-fill {
+    width: 100% !important;
+    max-width: 100% !important;
+    padding: 0 16px !important;
+    margin: 0 !important;
+  }
+  header > nav.navbar.mobile-sidenav > .container-fill > .row.align-center {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    flex-wrap: nowrap !important;
+    min-height: 88px !important;
+    height: 88px !important;
+    padding: 0 !important;
+  }
+  header > nav.navbar.mobile-sidenav .brand-item {
+    flex: 1 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: calc(100% - 56px) !important;
+  }
+  header > nav.navbar.mobile-sidenav .navbar-header {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: 100% !important;
+    height: 88px !important;
+    min-height: 88px !important;
+    padding: 0 !important;
+    gap: 0 !important;
+  }
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-brand {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    flex: 0 1 auto !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: calc(100% - 4px) !important;
+    height: 64px !important;
+    margin: 0 auto 0 0 !important;
+    padding: 0 !important;
+    overflow: hidden !important;
+    line-height: 1 !important;
+  }
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-brand img {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: min(175px, 100%) !important;
+    max-height: 52px !important;
+    margin: 0 !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+  }
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-toggle {
+    flex: 0 0 44px !important;
+    width: 44px !important;
+    min-width: 44px !important;
+    height: 44px !important;
+    margin-left: 8px !important;
+  }
+}
+@media screen and (max-width: 380px) {
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-brand img {
+    max-width: 145px !important;
+    max-height: 46px !important;
+  }
+}
+
+
+
+/* Corrective mobile header fix: keep full Stackly logo visible and hamburger at right.
+   Generic selectors intentionally cover the theme's mobile nav class variations. */
+@media (max-width: 767px) {
+  header .navbar-header {
+    display: flex !important;
+    flex-direction: row !important;
+    flex-wrap: nowrap !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    gap: 8px !important;
+    width: 100% !important;
+    min-width: 0 !important;
+    padding: 0 12px !important;
+    box-sizing: border-box !important;
+  }
+  header .navbar-header > .navbar-brand {
+    order: 1 !important;
+    display: flex !important;
+    flex: 0 1 auto !important;
+    align-items: center !important;
+    justify-content: flex-start !important;
+    width: auto !important;
+    min-width: 0 !important;
+    max-width: calc(100% - 56px) !important;
+    margin: 0 auto 0 0 !important;
+    padding: 0 !important;
+    overflow: visible !important;
+    float: none !important;
+  }
+  header .navbar-header > .navbar-brand img.logo {
+    display: block !important;
+    width: auto !important;
+    height: auto !important;
+    max-width: min(175px, 100%) !important;
+    max-height: 50px !important;
+    object-fit: contain !important;
+    object-position: left center !important;
+    flex: 0 1 auto !important;
+  }
+  header .navbar-header > .navbar-toggle {
+    order: 2 !important;
+    display: flex !important;
+    flex: 0 0 42px !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 42px !important;
+    min-width: 42px !important;
+    height: 42px !important;
+    margin: 0 0 0 auto !important;
+    padding: 0 !important;
+    float: none !important;
+    position: relative !important;
+    inset: auto !important;
+  }
+}
+@media (max-width: 380px) {
+  header .navbar-header > .navbar-brand img.logo {
+    max-width: min(150px, 100%) !important;
+    max-height: 46px !important;
+  }
+}
+
+
+
+/* Requested mobile header order: hamburger on the LEFT, Stackly logo on the RIGHT */
+@media screen and (max-width: 767px) {
+  header > nav.navbar.mobile-sidenav .navbar-header {
+    flex-direction: row !important;
+    justify-content: space-between !important;
+  }
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-toggle {
+    order: 1 !important;
+    margin: 0 auto 0 0 !important;
+    flex: 0 0 44px !important;
+  }
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-brand {
+    order: 2 !important;
+    margin: 0 0 0 auto !important;
+    justify-content: flex-end !important;
+    max-width: calc(100% - 56px) !important;
+  }
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-brand img.logo {
+    object-position: right center !important;
+    max-width: min(175px, 100%) !important;
+  }
+}
+@media screen and (max-width: 380px) {
+  header > nav.navbar.mobile-sidenav .navbar-header > .navbar-brand img.logo {
+    max-width: min(150px, 100%) !important;
+  }
+}
+
+
+
+/* Mobile page-scroll/content visibility fix: keep every section below hero reachable */
+@media screen and (max-width: 1024px) {
+  html {
+    height: auto !important;
+    min-height: 100% !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+  body {
+    height: auto !important;
+    min-height: 100% !important;
+    max-height: none !important;
+    overflow-x: hidden !important;
+    overflow-y: auto !important;
+    position: relative !important;
+    touch-action: pan-y !important;
+  }
+  body.stackly-menu-open {
+    overflow: hidden !important;
+    touch-action: none !important;
+  }
+  body:not(.stackly-menu-open) main,
+  body:not(.stackly-menu-open) #content,
+  body:not(.stackly-menu-open) .site-content {
+    height: auto !important;
+    max-height: none !important;
+    overflow: visible !important;
+  }
+  body:not(.stackly-menu-open) .banner-style-five,
+  body:not(.stackly-menu-open) .banner-style-five-area {
+    position: relative !important;
+    max-height: none !important;
+  }
+  body:not(.stackly-menu-open) section,
+  body:not(.stackly-menu-open) footer,
+  body:not(.stackly-menu-open) .default-padding,
+  body:not(.stackly-menu-open) .overflow-hidden {
+    flex-shrink: 0;
+  }
+}

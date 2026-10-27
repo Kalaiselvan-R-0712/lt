@@ -1,0 +1,956 @@
+<!DOCTYPE html>
+
+<html lang="en">
+<head>
+<!-- Google Tag Manager -->
+<script>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-NBNN7QC3');
+</script>
+<!-- End Google Tag Manager -->
+<!-- ========== Meta Tags ========== -->
+<meta charset="utf-8"/>
+<meta content="IE=edge" http-equiv="X-UA-Compatible"/>
+<meta content="width=device-width, initial-scale=1" name="viewport"/>
+<meta content="Stackly - Transportation &amp; Logistics Template" name="description"/>
+<!-- ========== Page Title ========== -->
+<title>Stackly Logistics</title>
+<!-- ========== Favicon Icon ========== -->
+<link href="assets/img/favicon.webp" rel="shortcut icon" type="image/x-icon"/>
+<!-- ========== Start Stylesheet ========== -->
+<link href="assets/css/bootstrap.min.css" rel="stylesheet"/>
+<link href="assets/css/font-awesome.min.css" rel="stylesheet"/>
+<link href="assets/css/stackly-icons.css" rel="stylesheet"/>
+<link href="assets/css/magnific-popup.css" rel="stylesheet"/>
+<link href="assets/css/swiper-bundle.min.css" rel="stylesheet"/>
+<link href="assets/css/animate.min.css" rel="stylesheet"/>
+<link href="assets/css/validnavs.css" rel="stylesheet"/>
+<link href="assets/css/helper.css" rel="stylesheet"/>
+<link href="assets/css/unit-test.css" rel="stylesheet"/>
+<link href="assets/css/style.css" rel="stylesheet"/>
+<link href="style.css" rel="stylesheet"/>
+<!-- ========== End Stylesheet ========== -->
+<style>
+/* Current-page navigation highlight: consistent across desktop, tablet, and mobile */
+.navbar-nav > li > a.current-page,
+.navbar-nav > li.current-page > a {
+    color: #1769aa !important;
+    font-weight: 700 !important;
+    position: relative;
+}
+.navbar-nav > li > a.current-page::after,
+.navbar-nav > li.current-page > a::after {
+    content: "";
+    position: absolute;
+    left: 15px;
+    right: 15px;
+    bottom: 8px;
+    height: 2px;
+    background: #1769aa;
+}
+@media (max-width: 1024px) {
+    .navbar-nav > li > a.current-page::after,
+    .navbar-nav > li.current-page > a::after {
+        left: 0;
+        right: auto;
+        bottom: 0;
+        width: 32px;
+    }
+}
+</style>
+<style>
+/* Login/Register: horizontal pair with zoom-only hover (no sideways movement). */
+.stackly-auth-buttons {
+    display: flex !important;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+    white-space: nowrap;
+}
+.stackly-auth-buttons > a.stackly-auth-btn {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 12px 20px;
+    border: 0;
+    border-radius: 0;
+    background: #ff5b00;
+    color: #fff;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    transform: scale(1);
+    transition: transform .25s ease, background-color .25s ease;
+    transform-origin: center;
+}
+.stackly-auth-buttons > a.stackly-register { background: #0b4654; }
+@media (hover: hover) and (pointer: fine) {
+    .stackly-auth-buttons > a.stackly-auth-btn:hover { transform: scale(1.06); }
+}
+@media (max-width: 1024px) {
+    .stackly-auth-buttons > a.stackly-auth-btn:hover { transform: none; }
+}
+</style><style id="stackly-auth-header-layout-fix">
+/* Keep only Login and Register in the header action area. */
+.stackly-auth-buttons{display:flex!important;flex-direction:row!important;align-items:center!important;justify-content:center!important;gap:10px!important;white-space:nowrap!important;}
+.stackly-auth-buttons>a.stackly-auth-btn{flex:0 0 auto!important;position:relative!important;inset:auto!important;margin:0!important;transform:scale(1)!important;}
+@media (max-width:1023px){
+ .navbar .attr-right{float:none!important;width:100%!important;margin:12px 0 0!important;clear:both!important;}
+ .navbar .attr-right .attr-nav{width:100%!important;}
+ .navbar .attr-right .attr-nav>ul{display:flex!important;flex-direction:column!important;align-items:center!important;justify-content:center!important;gap:10px!important;width:100%!important;margin:0!important;padding:0!important;}
+ .navbar .attr-right .attr-nav>ul>li.stackly-auth-buttons{display:flex!important;flex-direction:row!important;width:auto!important;max-width:100%!important;margin:0 auto!important;}
+ .navbar .attr-right .attr-nav>ul>li.button{display:block!important;position:relative!important;float:none!important;width:auto!important;max-width:100%!important;margin:0 auto!important;clear:both!important;}
+ .navbar .attr-right .attr-nav>ul>li.button>a{display:flex!important;position:relative!important;align-items:center!important;justify-content:center!important;margin:0!important;}
+}
+@media (hover:hover) and (pointer:fine){.stackly-auth-buttons>a.stackly-auth-btn:hover{transform:scale(1.06)!important;}}
+@media (hover:none),(max-width:1024px){.stackly-auth-buttons>a.stackly-auth-btn:hover{transform:scale(1)!important;}}
+</style><style id="stackly-auth-hover-visibility-fix">
+/* Final auth button colors and stable zoom hover: prevent theme hover rules from hiding buttons. */
+.stackly-auth-buttons > a.stackly-auth-btn.stackly-login {
+  background-color: #0b4654 !important;
+  color: #ffffff !important;
+}
+.stackly-auth-buttons > a.stackly-auth-btn.stackly-register {
+  background-color: #ff5b00 !important;
+  color: #ffffff !important;
+}
+.stackly-auth-buttons > a.stackly-auth-btn {
+  opacity: 1 !important;
+  visibility: visible !important;
+  position: relative !important;
+  z-index: 5 !important;
+  transform: scale(1) !important;
+  transition: transform .22s ease !important;
+  transform-origin: center center !important;
+}
+@media (hover: hover) and (pointer: fine) and (min-width: 1025px) {
+  .stackly-auth-buttons > a.stackly-auth-btn:hover,
+  .stackly-auth-buttons > a.stackly-auth-btn:focus-visible {
+    opacity: 1 !important;
+    visibility: visible !important;
+    z-index: 20 !important;
+    transform: scale(1.06) !important;
+  }
+}
+@media (hover: none), (max-width: 1024px) {
+  .stackly-auth-buttons > a.stackly-auth-btn:hover,
+  .stackly-auth-buttons > a.stackly-auth-btn:focus-visible {
+    transform: scale(1) !important;
+  }
+}
+</style><link href="https://unpkg.com/aos@2.3.4/dist/aos.css" rel="stylesheet"/></head>
+<body>
+<!-- Google Tag Manager (noscript) -->
+<noscript><iframe height="0" src="https://www.googletagmanager.com/ns.html?id=GTM-NBNN7QC3" style="display:none;visibility:hidden" width="0"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!--[if lte IE 9]>
+        <p class="browserupgrade">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience and security.</p>
+    <![endif]-->
+<!-- Start Preloader 
+    ============================================= -->
+<div id="preloader">
+<div class="stackly-loader-inner">
+<div class="stackly-loader">
+<span class="stackly-loader-item"></span>
+<span class="stackly-loader-item"></span>
+<span class="stackly-loader-item"></span>
+<span class="stackly-loader-item"></span>
+<span class="stackly-loader-item"></span>
+<span class="stackly-loader-item"></span>
+<span class="stackly-loader-item"></span>
+<span class="stackly-loader-item"></span>
+</div>
+</div>
+</div>
+<!-- preloader end -->
+<!-- Start Header Top 
+    ============================================= -->
+<div class="top-bar-area style-one bg-dark text-light" data-aos="fade-up" data-aos-duration="750">
+<div class="container-fill">
+<div class="row align-center">
+<div class="col-xl-6 offset-xl-3 col-lg-8 info">
+<ul class="item-flex">
+<li>
+<i class="fas fa-envelope-open-text"></i> support@stackly.com
+                        </li>
+<li>
+<i class="fas fa-clock"></i> Working Hours: 8:00 AM – 7:45 PM
+                        </li>
+</ul>
+</div>
+<div class="col-xl-3 col-lg-4 text-end">
+<div class="social">
+<ul class="item-flex"><li><a aria-label="Gmail" href="404.html"><i class="fas fa-envelope"></i></a></li><li><a aria-label="Facebook" href="404.html"><i class="fab fa-facebook-f"></i></a></li><li><a aria-label="X" href="404.html"><img alt="X" src="assets/img/icon/twitter-x.webp"/></a></li><li><a aria-label="Instagram" href="404.html"><i class="fab fa-instagram"></i></a></li><li><a aria-label="LinkedIn" href="404.html"><i class="fab fa-linkedin-in"></i></a></li></ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Header Top -->
+<!-- Header 
+    ============================================= -->
+<header data-aos="fade-down" data-aos-duration="700">
+<!-- Start Navigation -->
+<nav class="navbar mobile-sidenav nav-border nav-full-width navbar-sticky navbar-default validnavs">
+<div class="container-fill">
+<div class="row align-center">
+<!-- Start Header Navigation -->
+<div class="col-lg-3 brand-item">
+<div class="navbar-header">
+<button class="navbar-toggle" data-target="#navbar-menu" data-toggle="collapse" type="button">
+<i class="fa fa-bars"></i>
+</button>
+<a class="navbar-brand" href="index.html">
+<img alt="Logo" class="logo logo-display" src="assets/img/logo-2-light.webp"/>
+<img alt="Logo" class="logo logo-scrolled" src="assets/img/logo-2.webp"/>
+</a>
+</div>
+</div>
+<!-- End Header Navigation -->
+<!-- Collect the nav links, forms, and other content for toggling -->
+<div class="col-lg-6">
+<div class="collapse navbar-collapse" id="navbar-menu">
+<a class="stackly-menu-brand" aria-label="Go to homepage" href="index.html"><img alt="Stackly logo" src="assets/img/logo-2-light.webp"/></a>
+<button class="navbar-toggle" data-target="#navbar-menu" data-toggle="collapse" type="button">
+<i class="fa fa-times"></i>
+</button>
+<ul class="nav navbar-nav" data-in="fadeInDown" data-out="fadeOutUp">
+<li><a aria-current="page" class="" href="index.html">Home</a></li>
+<li><a class="current-page" href="about.html">About</a></li>
+<li><a href="services.html">Services</a></li>
+<li><a href="gallery.html">Gallery</a></li>
+<li><a href="blog.html">Blog</a></li>
+<li><a href="pricing.html">Pricing</a></li>
+<li><a href="contact.html">Contact</a></li>
+</ul>
+</div>
+</div>
+<!-- /.navbar-collapse -->
+<!-- Start Atribute Navigation -->
+<div class="col-lg-3">
+<div class="attr-right">
+<div class="attr-nav">
+<ul>
+<li class="stackly-auth-buttons">
+<a class="stackly-auth-btn stackly-login" href="login.html">Login</a>
+<a class="stackly-auth-btn stackly-register" href="register.html">Register</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<!-- End Atribute Navigation -->
+</div>
+</div>
+<!-- Overlay screen for menu -->
+<div class="overlay-screen"></div>
+<!-- End Overlay screen for menu -->
+</nav>
+<!-- End Navigation -->
+</header>
+<!-- End Header -->
+<!-- Start Breadcrumb 
+    ============================================= -->
+<div class="breadcrumb-area with-banner bg-cover text-center bg-dark text-light" data-aos="fade-right" data-aos-delay="80" data-aos-duration="750" style="background-image: url(assets/img/banner/15.webp);">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<h1>About Us</h1>
+<nav aria-label="breadcrumb">
+<ol class="breadcrumb">
+<li><a href="404.html"><i class="fas fa-home"></i> Home</a></li>
+<li class="active">About</li>
+</ol>
+</nav>
+</div>
+</div>
+</div>
+</div>
+<!-- End Breadcrumb -->
+<!-- Start About 
+    ============================================= -->
+<div class="about-style-one-area default-padding" data-aos="fade-left" data-aos-delay="160" data-aos-duration="750" style="background-image: url(assets/img/shape/wave-shape-right.webp);">
+<div class="shape-style-five">
+<img alt="Image Not Found" src="assets/img/shape/globe.webp"/>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-6 offset-lg-2">
+<div class="heading-left">
+<h4 class="sub-title">About Company</h4>
+<h2 class="title split-text">Creating Long-Term Value For Stakeholder.</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row gutter-lg">
+<div class="col-lg-9">
+<div class="row align-center gutter-lg">
+<div class="col-lg-6">
+<div class="thumb-style-one wow fadeInUp">
+<img alt="Image Not Found" src="assets/img/about/1.webp"/>
+</div>
+</div>
+<div class="col-lg-6">
+<div class="about-style-one-info wow fadeInUp" data-wow-delay="100ms">
+<p>
+                                    Let us navigate the complexities of logistics for you, allowing you to focus on your core business. Our expert management ensures smooth operations and optimal efficiency every step of the way to return your transporation process.
+                                </p>
+<div class="card-style-one">
+<h4>Our Features</h4>
+<ul class="list-style-one">
+<li>International shipping services</li>
+<li>Reduce your Shipping Costs</li>
+<li>Exceptional logistical support</li>
+</ul>
+</div>
+<a class="btn-style-one dark mt-25" href="404.html">
+<div class="icon">
+<svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 17L17 1H7.8" stroke="white" stroke-width="2"></path>
+</svg>
+</div>
+<span>Learn More</span>
+<div class="icon">
+<svg fill="none" height="18" viewbox="0 0 20 18" width="20" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 17L17 1H7.8" stroke="white" stroke-width="2"></path>
+</svg>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-3">
+<div class="thumb-style-two wow fadeInUp" data-wow-delay="200ms">
+<img alt="Image Not Found" src="assets/img/about/2.webp"/>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End About -->
+<!-- Start Fun Fact 
+    ============================================= -->
+<div class="fun-fact-style-one-area bg-dark text-light" data-aos="zoom-in" data-aos-delay="240" data-aos-duration="750">
+<div class="airplane-shape">
+<img alt="Image Not Found" class="upDownScrol" src="assets/img/illustration/apirplane-2.webp"/>
+</div>
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<div class="fun-fact-style-one-container">
+<div class="left-info default-padding-top">
+<h4 class="sub-title">Why chooseus</h4>
+<h2 class="title split-text">Logistics <br/> Capabilities</h2>
+<p class="wow fadeInUp">
+                                Excellence projecting is devonshire dispatched remarkably on estimating. Side in so life past. Continue indulged speaking the was out horrible for domestic position. Seeing rather her you not esteem men settle genius excuse. Deal say over you age from. Comparison new ham melancholy son themselves.
+                            </p>
+</div>
+<div class="fun-fact-style-one-items">
+<div class="fun-fact" data-aos="fade-up-left" data-aos-duration="750">
+<div class="counter">
+<div class="timer" data-speed="1000" data-to="100">100</div>
+<div class="operator">%</div>
+</div>
+<h4>On-Time Deliveries</h4>
+</div>
+<div class="fun-fact" data-aos="fade-up-right" data-aos-delay="80" data-aos-duration="750">
+<div class="counter">
+<div class="timer" data-speed="1000" data-to="90">90</div>
+<div class="operator">%</div>
+</div>
+<h4>Global Network Coverage</h4>
+</div>
+<div class="fun-fact" data-aos="flip-left" data-aos-delay="160" data-aos-duration="750">
+<div class="counter">
+<div class="timer" data-speed="1000" data-to="80">80</div>
+<div class="operator">%</div>
+</div>
+<h4>Cross-Border Efficiency</h4>
+</div>
+</div>
+<div class="default-padding right-info text-center">
+<a class="circle-button-two" href="404.html">
+<svg fill="none" viewbox="0 0 20 18" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 17L17 1H7.8" stroke="#ffffff" stroke-width="2"></path>
+</svg>
+<span>View All Services</span>
+</a>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Fun Fact -->
+<!-- Start Process 
+    ============================================= -->
+<div class="process-style-two-area default-padding bg-gray text-center" data-aos="fade-down" data-aos-duration="750">
+<div class="container">
+<div class="row">
+<div class="col-xl-6 offset-xl-3 col-lg-8 offset-lg-2">
+<div class="site-heading text-center">
+<h4 class="sub-title">Our Process</h4>
+<h2 class="title split-text">Our working process</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="process-style-two-items wow fadeInUp">
+<div class="row">
+<!-- Single Item -->
+<div class="col-lg-3 col-md-6 process-style-two-single hover-active-item">
+<div class="process-style-two-item">
+<div class="icon">
+<img alt="Image Not Found" src="assets/img/icon/quote-request.webp"/>
+</div>
+<h4>Request A Quote</h4>
+<p>
+                                Our team has a wealth of experience in managing every aspect the point.
+                            </p>
+<span>01</span>
+</div>
+</div>
+<!-- End Single Item -->
+<!-- Single Item -->
+<div class="col-lg-3 col-md-6 process-style-two-single hover-active-item active">
+<div class="process-style-two-item">
+<div class="icon">
+<img alt="Image Not Found" src="assets/img/icon/parcel-picking.webp"/>
+</div>
+<h4>Picking Product</h4>
+<p>
+                                Most team has a wealth of experience in managing every aspect the point.
+                            </p>
+<span>02</span>
+</div>
+</div>
+<!-- End Single Item -->
+<!-- Single Item -->
+<div class="col-lg-3 col-md-6 process-style-two-single hover-active-item">
+<div class="process-style-two-item">
+<div class="icon">
+<img alt="Image Not Found" src="assets/img/icon/product-shipping.webp"/>
+</div>
+<h4>Product Packaging</h4>
+<p>
+                                Best team has a wealth of experience in managing every aspect the point.
+                            </p>
+<span>03</span>
+</div>
+</div>
+<!-- End Single Item -->
+<!-- Single Item -->
+<div class="col-lg-3 col-md-6 process-style-two-single hover-active-item">
+<div class="process-style-two-item">
+<div class="icon">
+<img alt="Image Not Found" src="assets/img/icon/truck.webp"/>
+</div>
+<h4>Deliver Shipping</h4>
+<p>
+                                Fast team has a wealth of experience in managing every aspect the point.
+                            </p>
+<span>04</span>
+</div>
+</div>
+<!-- End Single Item -->
+</div>
+</div>
+</div>
+</div>
+<!-- End Process -->
+<!-- Start Video Area 
+    ============================================= -->
+<div class="video-bg-area bg-dark text-light text-center bg-cover default-padding shadow dark video-bg-live" data-aos="flip-up" data-aos-delay="80" data-aos-duration="750" style="background-image: url(assets/img/banner/13.webp);">
+<div class="player" data-property="{videoURL:'HUozIpTODZQ',containment:'.video-bg-live', showControls:false, autoPlay:true, zoom:0, loop:true, mute:true, startAt:0, opacity:1, quality:'default'}"></div>
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<div class="video-bg-inner">
+<a class="video-play-button" href="404.html"><i class="fas fa-play"></i></a>
+<h2 class="title split-text">Efficient and reliable cargo delivery solutions</h2>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- End Video -->
+<!-- Start Team 
+    ============================================= -->
+<div class="team-style-one-area default-padding bottom-less text-center" data-aos="slide-up" data-aos-delay="160" data-aos-duration="750">
+<div class="container">
+<div class="row">
+<div class="col-lg-8 offset-lg-2">
+<div class="site-heading text-center">
+<h4 class="sub-title">Team members</h4>
+<h2 class="title split-text">Meet our expert team</h2>
+</div>
+</div>
+</div>
+</div>
+<div class="container">
+<div class="row">
+<!-- Single Item -->
+<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+<div class="team-style-one-item wow fadeInUp">
+<div class="thumb">
+<img alt="Image Not Found" src="assets/img/team/1.webp"/>
+</div>
+<div class="info">
+<span>Chief Officer</span>
+<div class="overlay">
+<ul>
+<li><a href="404.html"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="404.html"><i class="fab fa-instagram"></i></a></li>
+<li><a href="404.html"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="404.html"><i class="fab fa-behance"></i></a></li>
+</ul>
+</div>
+<h4><a href="404.html">Aleesha Brown</a></h4>
+</div>
+</div>
+</div>
+<!-- Single Item -->
+<!-- Single Item -->
+<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+<div class="team-style-one-item wow fadeInUp" data-wow-delay="150ms">
+<div class="thumb">
+<img alt="Image Not Found" src="assets/img/team/2.webp"/>
+</div>
+<div class="info">
+<span>Ship Management</span>
+<div class="overlay">
+<ul>
+<li><a href="404.html"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="404.html"><i class="fab fa-instagram"></i></a></li>
+<li><a href="404.html"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="404.html"><i class="fab fa-behance"></i></a></li>
+</ul>
+</div>
+<h4><a href="404.html">Kevin Martin</a></h4>
+</div>
+</div>
+</div>
+<!-- Single Item -->
+<!-- Single Item -->
+<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+<div class="team-style-one-item wow fadeInUp" data-wow-delay="300ms">
+<div class="thumb">
+<img alt="Image Not Found" src="assets/img/team/3.webp"/>
+</div>
+<div class="info">
+<span>Sales Manager</span>
+<div class="overlay">
+<ul>
+<li><a href="404.html"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="404.html"><i class="fab fa-instagram"></i></a></li>
+<li><a href="404.html"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="404.html"><i class="fab fa-behance"></i></a></li>
+</ul>
+</div>
+<h4><a href="404.html">Sarah Albert</a></h4>
+</div>
+</div>
+</div>
+<!-- Single Item -->
+<!-- Single Item -->
+<div class="col-xl-3 col-lg-6 col-md-6 mb-30">
+<div class="team-style-one-item wow fadeInUp" data-wow-delay="450ms">
+<div class="thumb">
+<img alt="Image Not Found" src="assets/img/team/4.webp"/>
+</div>
+<div class="info">
+<span>Cargo Driver</span>
+<div class="overlay">
+<ul>
+<li><a href="404.html"><i class="fab fa-facebook-f"></i></a></li>
+<li><a href="404.html"><i class="fab fa-instagram"></i></a></li>
+<li><a href="404.html"><i class="fab fa-linkedin-in"></i></a></li>
+<li><a href="404.html"><i class="fab fa-behance"></i></a></li>
+</ul>
+</div>
+<h4><a href="404.html">Amanulla Joey</a></h4>
+</div>
+</div>
+</div>
+<!-- Single Item -->
+</div>
+</div>
+</div>
+<!-- End Team -->
+<!-- Start Testimonial 
+    ============================================= -->
+<div class="testimonial-style-three-area default-padding bg-gray" data-aos="zoom-in-up" data-aos-delay="240" data-aos-duration="750">
+<div class="container">
+<div class="testimonial-style-three-items">
+<div class="col-lg-7 offset-lg-3">
+<div class="heading-left">
+<h4 class="sub-title">Testimonials</h4>
+<h2 class="title split-text">What our clients say</h2>
+<i class="icon-quote-2"></i>
+</div>
+</div>
+<div class="row">
+<div class="col-lg-8">
+<div class="testimonial-style-thee-carousel swiper wow fadeInUp">
+<div class="swiper-wrapper">
+<!-- Single Item -->
+<div class="swiper-slide">
+<div class="testimonial-style-three">
+<div class="thumb">
+<img alt="Image Not Found" src="assets/img/team/2.webp"/>
+</div>
+<div class="info">
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+<p>
+                                                I recently used Ocean Explorer Logistics for a shipment of goods from our warehouse to a customer on the opposite coast, and I couldn’t be happier with the service I received. From the moment I reached out to them, their clients support team was incredibly helpful.
+                                            </p>
+<div class="provider">
+<h4>Rachel Ballinger</h4>
+<span>CEO, Bizzbreak Inc</span>
+</div>
+</div>
+</div>
+</div>
+<!-- End Single Item -->
+<!-- Single Item -->
+<div class="swiper-slide">
+<div class="testimonial-style-three">
+<div class="thumb">
+<img alt="Image Not Found" src="assets/img/team/3.webp"/>
+</div>
+<div class="info">
+<div class="rating">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+</div>
+<p>
+                                                Perfection of used Ocean Explorer Logistics for a shipment of goods from our warehouse to a customer on the opposite coast, and I couldn’t be happier with the service I received. From the moment I reached out to them, their clients support team was incredibly helpful.
+                                            </p>
+<div class="provider">
+<h4>Alcheri Banani</h4>
+<span>Markert, Bizzbreak Inc</span>
+</div>
+</div>
+</div>
+</div>
+<!-- End Single Item -->
+</div>
+</div>
+</div>
+<div class="col-lg-4 mt-200 mt-xs-30 mt-md-50">
+<div class="review-card bg-dark text-light wow fadeInUp" data-wow-delay="100ms">
+<div class="top">
+<span>REVIEWED ON</span>
+<div class="brand">
+<img alt="Image Not Found" src="assets/img/brand/6.webp"/>
+</div>
+</div>
+<div class="bottom">
+<p>
+                                    Avg.Rating Based on 10k Company Reviews.
+                                </p>
+<div class="review-rating">
+<div class="rating-icon">
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star"></i>
+<i class="fas fa-star-half-alt"></i>
+</div>
+<span>(4.8 Out Of 5)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Pagination -->
+<div class="testimonial-style-thee-pagination"></div>
+</div>
+</div>
+</div>
+<!-- End Testimonial -->
+<!-- Start Footer 
+    ============================================= -->
+<footer class="bg-dark footer-style-four overflow-hidden text-light" data-aos="fade-up" data-aos-duration="800">
+<div class="shape-style-two">
+<img alt="Image Not Found" src="assets/img/shape/car-right.webp"/>
+</div>
+<div class="container">
+<div class="f-items default-padding">
+<div class="row">
+<div class="col-lg-5 footer-item pr-50 pr-md-15 pr-xs-15">
+<div class="footer-logo">
+<a aria-label="Go to 404 page" href="index.html"><img alt="Image Not Found" src="assets/img/logo-light.webp"/></a>
+</div>
+<div class="f-item about">
+<div class="f-item">
+<p>
+                                    Experience Seamless and Reliable Logistics Solutions for Global Transportation Needs. 24/7 customer support and expert advice. Up to 70% savings on shipping costs with all major carriers.
+                                </p>
+<div class="opening-hours">
+<h4 class="widget-title">Opening Hours</h4>
+<ul class="opening-hours">
+<li>Saturday - Tuesday <span>9:00 AM to 5:00 PM</span></li>
+<li>Wednesday - Friday <span>10:00 AM to 4:00 PM</span></li>
+<li>Sunday <span>Off day</span></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="col-lg-7 footer-item pl-100 pl-md-15 pl-xs-15">
+<div class="footer-item-grid two-colum">
+<div class="footer-single-grid">
+<h4 class="widget-title">Quick Links</h4>
+<div class="f-item link">
+<ul>
+<li>
+<a href="about.html">About</a>
+</li><li>
+<a href="services.html">Services</a>
+</li><li>
+<a href="pricing.html">Pricing</a>
+</li><li>
+<a href="contact.html">Contact</a>
+</li></ul>
+</div>
+</div>
+<div class="footer-single-grid">
+<h4 class="widget-title">Our Services</h4>
+<div class="f-item link">
+<ul>
+<li>
+<a href="404.html">Less Than Truckload</a>
+</li>
+<li>
+<a href="404.html">Rail Freight Shipping</a>
+</li>
+<li>
+<a href="404.html">Hot Shot Trucking</a>
+</li>
+<li>
+<a href="404.html">Freight forwarding</a>
+</li>
+</ul>
+</div>
+</div>
+<div class="footer-single-grid">
+<div class="footer-single-grid">
+<h4 class="widget-title">Social Link</h4>
+<ul class="footer-social-regular"><li><a aria-label="Gmail" href="404.html"><i class="fas fa-envelope"></i></a></li><li><a aria-label="Facebook" href="404.html"><i class="fab fa-facebook-f"></i></a></li><li><a aria-label="X" href="404.html"><img alt="X" src="assets/img/icon/twitter-x.webp"/></a></li><li><a aria-label="Instagram" href="404.html"><i class="fab fa-instagram"></i></a></li><li><a aria-label="LinkedIn" href="404.html"><i class="fab fa-linkedin-in"></i></a></li></ul>
+</div>
+</div>
+<div class="footer-single-grid">
+<h4 class="widget-title">Support</h4>
+<div class="f-item link">
+<ul>
+<li>
+<a href="404.html">Term &amp; Conditions</a>
+</li>
+<li>
+<a href="404.html">Privacy policy</a>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Start Footer Bottom -->
+<div class="footer-bottom bg-dark-secondary text-center">
+<div class="container">
+<div class="row">
+<div class="col-lg-12">
+<p>© Copyright 2026. All Rights Reserved by <a href="#">Stackly</a></p>
+</div>
+</div>
+</div>
+</div>
+<!-- End Footer Bottom -->
+</footer>
+<!-- End Footer -->
+<!-- jQuery Frameworks
+    ============================================= -->
+<script src="assets/js/jquery-3.7.1.min.js"></script>
+<script src="assets/js/bootstrap.bundle.min.js"></script>
+<script src="assets/js/jquery.appear.js"></script>
+<script src="assets/js/jquery.easing.min.js"></script>
+<script src="assets/js/swiper-bundle.min.js"></script>
+<script src="assets/js/progress-bar.min.js"></script>
+<script src="assets/js/isotope.pkgd.min.js"></script>
+<script src="assets/js/imagesloaded.pkgd.min.js"></script>
+<script src="assets/js/magnific-popup.min.js"></script>
+<script src="assets/js/count-to.js"></script>
+<script src="assets/js/jquery.nice-select.min.js"></script>
+<script src="assets/js/wow.min.js"></script>
+<script src="assets/js/YTPlayer.min.js"></script>
+<script src="assets/js/validnavs.js"></script>
+<script src="assets/js/gsap.js"></script>
+<script src="assets/js/ScrollTrigger.min.js"></script>
+<script src="assets/js/SplitText.min.js"></script>
+<script src="assets/js/main.js"></script>
+<script src="https://unpkg.com/aos@2.3.4/dist/aos.js"></script><script>
+(function () {
+  function initStacklyAOS() {
+    if (window.AOS && typeof window.AOS.init === 'function') {
+      window.AOS.init({
+        duration: 750,
+        easing: 'ease-out-cubic',
+        once: true,
+        mirror: false,
+        offset: 70,
+        anchorPlacement: 'top-bottom',
+        disable: window.matchMedia('(prefers-reduced-motion: reduce)').matches
+      });
+    }
+  }
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStacklyAOS, { once: true });
+  } else {
+    initStacklyAOS();
+  }
+  window.addEventListener('load', function () {
+    if (window.AOS && typeof window.AOS.refreshHard === 'function') window.AOS.refreshHard();
+  }, { once: true });
+})();
+</script><script>
+/* Stackly: route main-content clickable items to 404.html.
+   Header and footer behaviors are intentionally left unchanged. */
+(function () {
+  document.addEventListener('click', function (event) {
+    var target = event.target && event.target.closest
+      ? event.target.closest('a, button, [role="button"], input[type="button"], input[type="submit"], video, [onclick]')
+      : null;
+    if (!target) return;
+
+    var header = document.querySelector('header');
+    var footer = document.querySelector('footer');
+    if ((header && header.contains(target)) || (footer && footer.contains(target))) return;
+
+    // Only intercept the area between the shared header and footer.
+    if (header && footer) {
+      var position = target.compareDocumentPosition(footer);
+      var afterHeader = !!(header.compareDocumentPosition(target) & Node.DOCUMENT_POSITION_FOLLOWING);
+      var beforeFooter = !!(position & Node.DOCUMENT_POSITION_FOLLOWING);
+      if (!afterHeader || !beforeFooter) return;
+    }
+
+    event.preventDefault();
+    event.stopPropagation();
+    if (typeof event.stopImmediatePropagation === 'function') event.stopImmediatePropagation();
+    window.location.href = '404.html';
+  }, true);
+})();
+</script>
+<script>
+(function () {
+  function setupStacklyMobileMenu() {
+    var nav = document.querySelector('nav.navbar.mobile-sidenav');
+    if (!nav || nav.dataset.stacklyMobileReady === '1') return;
+    nav.dataset.stacklyMobileReady = '1';
+    var menu = nav.querySelector('#navbar-menu');
+    var auth = nav.querySelector('.stackly-auth-buttons');
+    var authOriginalParent = auth ? auth.parentElement : null;
+    var authOriginalNext = auth ? auth.nextElementSibling : null;
+    var toggles = nav.querySelectorAll('.navbar-toggle');
+    var links = nav.querySelectorAll('.nav.navbar-nav a[href]');
+    var path = (location.pathname.split('/').pop() || 'index.html').toLowerCase();
+
+    links.forEach(function (link) {
+      var href = (link.getAttribute('href') || '').split('#')[0].split('?')[0].toLowerCase();
+      if (href === path) {
+        link.classList.add('current-page');
+        link.setAttribute('aria-current', 'page');
+      } else {
+        link.classList.remove('current-page');
+        link.removeAttribute('aria-current');
+      }
+    });
+
+    function mobile() { return window.matchMedia('(max-width: 991.98px)').matches; }
+    function isOpen() {
+      return menu && (menu.classList.contains('in') || menu.classList.contains('show') || menu.classList.contains('stackly-menu-visible'));
+    }
+    function moveAuthIntoMenu() {
+      if (auth && mobile() && menu && !menu.contains(auth)) {
+        auth.classList.add('stackly-mobile-auth');
+        menu.appendChild(auth);
+      }
+    }
+    function restoreAuth() {
+      if (auth && authOriginalParent && auth.parentElement !== authOriginalParent) {
+        authOriginalParent.insertBefore(auth, authOriginalNext && authOriginalNext.parentElement === authOriginalParent ? authOriginalNext : null);
+        auth.classList.remove('stackly-mobile-auth');
+      }
+    }
+    function setOpen(open) {
+      if (!menu) return;
+      if (open && mobile()) {
+        moveAuthIntoMenu();
+        menu.classList.add('stackly-menu-visible');
+        menu.classList.add('in');
+        document.documentElement.classList.add('stackly-menu-open');
+        document.body.classList.add('stackly-menu-open');
+        toggles.forEach(function (b) { b.setAttribute('aria-expanded', 'true'); });
+      } else {
+        menu.classList.remove('stackly-menu-visible');
+        menu.classList.remove('in');
+        menu.classList.remove('show');
+        document.documentElement.classList.remove('stackly-menu-open');
+        document.body.classList.remove('stackly-menu-open');
+        toggles.forEach(function (b) { b.setAttribute('aria-expanded', 'false'); });
+        if (!mobile()) restoreAuth();
+      }
+    }
+    toggles.forEach(function (button) {
+      button.addEventListener('click', function (event) {
+        if (!mobile()) return;
+        event.preventDefault();
+        event.stopPropagation();
+        if (typeof event.stopImmediatePropagation === 'function') event.stopImmediatePropagation();
+        setOpen(!isOpen());
+      });
+    });
+    links.forEach(function (link) {
+      link.addEventListener('click', function () { if (mobile()) setOpen(false); });
+    });
+    window.addEventListener('resize', function () {
+      if (mobile()) { if (isOpen()) moveAuthIntoMenu(); }
+      else { setOpen(false); restoreAuth(); }
+    });
+    document.addEventListener('keydown', function (event) {
+      if (event.key === 'Escape' && isOpen()) setOpen(false);
+    });
+    if (auth) auth.addEventListener('click', function (event) {
+      if (event.target.closest('a')) setOpen(false);
+    });
+    if (mobile()) restoreAuth();
+  }
+  if (document.readyState === 'loading') document.addEventListener('DOMContentLoaded', setupStacklyMobileMenu);
+  else setupStacklyMobileMenu();
+})();
+</script>
+
+
+
+
+</body>
+</html>
